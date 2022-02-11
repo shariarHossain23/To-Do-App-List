@@ -6,7 +6,7 @@ document.getElementById("add-btn").addEventListener("click",function(){
     if(inputField == ""){
       alert("some text please")
     }
-    else if(parseInt(inputField) > 0){
+    else if(typeof parseFloat(inputField) == "number" && !isNaN(parseFloat(inputField)  )){
         alert("plz input text")
     }
     else{
