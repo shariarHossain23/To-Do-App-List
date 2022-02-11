@@ -28,7 +28,26 @@ document.getElementById("add-btn").addEventListener("click",function(){
     }
 // delete element
     const deleteBtn = document.getElementsByClassName("remove");
- 
+    for (const button of deleteBtn) {
+      button.addEventListener("click",function(e){
+        e.target.parentNode.parentNode.style.display = "none"
+      })
+    }
+
+    // ads something in done tag
+    const doneBtn = document.getElementsByClassName("done");
+    for (const button of doneBtn) {
+      button.addEventListener("click",function(e){
+       e.target.parentNode.parentNode.style.textDecoration = "line-through"
+      })
+    }
+
+    // delete all
+ document.getElementById("clear").addEventListener("click",function(){
+  document.getElementById("userList").style.display = "none"
+ })
+
+
 })
 
 
